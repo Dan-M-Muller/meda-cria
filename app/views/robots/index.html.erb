@@ -1,0 +1,18 @@
+<h1>Robos</h1>
+<%= link_to "Create a Robot", new_robot_path, class: "btn btn-warning"%>
+<ul class="list-group mt-3">
+  <% @robots.each do |r| %>
+    <li class="list-group-item mt-3">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="">
+        <div class="card-header">
+        Chassis:
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Name: <%= r.name %></h5>
+          <%= link_to "Edit",  edit_robot_path(r), class: "btn btn-danger" %>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>
